@@ -1,7 +1,7 @@
 return {
-    -- Completion source for nvim-cmp
-    ---@see https://github.com/saadparwaiz1/cmp_luasnip
-    "saadparwaiz1/cmp_luasnip",
+    -- Completion plugin for nvim-cmp
+    "hrsh7th/cmp-vsnip",
+    "hrsh7th/vim-vsnip",
 
     -- Completion sources
     "hrsh7th/cmp-nvim-lsp",
@@ -15,7 +15,8 @@ return {
         ---@see https://github.com/hrsh7th/nvim-cmp
         "hrsh7th/nvim-cmp",
         dependencies = {
-            "saadparwaiz1/cmp_luasnip",
+            "hrsh7th/cmp-vsnip",
+            "hrsh7th/vim-vsnip",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
