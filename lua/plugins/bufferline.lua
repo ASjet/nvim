@@ -17,5 +17,7 @@ return {
                 }
             }
         })
+		vim.keymap.set("n", "[", ":BufferLineCyclePrev<CR>")
+		vim.keymap.set("n", "]", ":BufferLineCycleNext<CR>")
     end,
 }
