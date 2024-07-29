@@ -15,7 +15,7 @@ local function on_attach(bufnr)
         -- open file
         api.node.open.edit()
         -- Close the tree if file was opened
-        api.tree.close()
+        -- api.tree.close()
     end
     end
 
@@ -61,12 +61,13 @@ return {
             vim.opt.termguicolors = true
 
             -- global
-            vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
+            vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeFocus<cr>", {silent = true, noremap = true})
         end,
         config = function(LazyPlugin, opts)
             require("nvim-tree").setup({
-                hijack_cursor = true,
+                hijack_cursor = false,
                 sync_root_with_cwd = true,
+                auto_reload_on_write = true,
 
                 sort = {
                     sorter = "case_sensitive",
