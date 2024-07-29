@@ -22,7 +22,7 @@ vim.keymap.set("n", "``", "ciw``<Esc>hp")
 vim.keymap.set("v", "``", "s``<Esc>hp")
 
 -- Use jj as Esc
-vim.keymap.set("i", "jj", "<Esc>")
+-- vim.keymap.set("i", "jj", "<Esc>")
 
 -- Allow saving of files as sudo when I forgot to start vim using sudo.
 vim.keymap.set('c', 'w!!', ':w ! sudo tee % > /dev/null')
